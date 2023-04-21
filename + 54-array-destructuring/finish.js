@@ -6,7 +6,9 @@
  * Используйте деструктуризацию массива
  */
 
-const processQuantities = (/* parameters */) => {
+const processQuantities = (parameters) => {
+  const [minQty, maxQty, defaultQty=0] = parameters
+
   console.log(minQty) // 8
   console.log(maxQty) // 29
   console.log(defaultQty) // 10 в первом вызове, 0 во втором вызове

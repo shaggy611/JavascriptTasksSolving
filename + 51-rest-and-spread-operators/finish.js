@@ -19,17 +19,26 @@ const scores3 = [1.3, 2.5, 1.9]
 const scores4 = ['abc', 1.3, true, 2.5, 1.9]
 
 
-function meanScore (args) {
-  const sum = args.reduce((acc, current) => acc + current, 0)
+function meanScore (...args) {
+  console.log(args)
+  const arrays = [].concat(...args)
+  let sum = 0
+  for (const element of arrays) {
+    if(typeof element !== 'number') {
+      return 'Arguments must be only numbers'
+    }
 
-  return sum[0]/args.length
+    sum += element
+  }
+
+  return (sum/arrays.length).toFixed(2)
 }
 
 
-console.log(meanScore(scores1))
+//console.log(meanScore(scores1))
 // 1.93
 
-// console.log(meanScore(/* все элементы из массивов "scores1" и "scores2" */))
+console.log(meanScore(scores1, scores2, scores3))
 // // 2.8
 
 // console.log(
