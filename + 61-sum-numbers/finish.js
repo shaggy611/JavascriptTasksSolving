@@ -8,7 +8,24 @@
  * 3. Также верните эту сумму как результат функции
  */
 
-sumNumbers(1, 3)
+// function sumNumbers(...items) {
+//     const result = items.reduce((sum, item) => sum += item, 0)
+//     console.log(`Sum of numbers is ${result}`)
+//     return result
+// }
+
+function sumNumbers() {
+    let sum = 0
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i]
+    }
+    console.log(`Sum of numbers is ${sum}`)
+    return sum
+}
+
+
+const x = sumNumbers(1, 3)
+console.log(x)
 // 4
 
 sumNumbers(10, 20, 5)

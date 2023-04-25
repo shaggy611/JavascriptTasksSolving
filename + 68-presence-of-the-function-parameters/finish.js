@@ -6,6 +6,10 @@
  */
 
 function square(a) {
+  if(arguments.length === 0) {
+    // console.error('Function can not be called without parameters')
+    throw new Error('Function can not be called without parameters')
+  }
   console.log(a * a)
 }
 

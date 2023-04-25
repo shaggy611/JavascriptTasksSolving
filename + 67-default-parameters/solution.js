@@ -23,3 +23,4 @@ multiplyBy(2, 0)
 
 multiplyBy(5, 10)
 // 50
+
