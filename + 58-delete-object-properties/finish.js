@@ -17,6 +17,18 @@ let person = {
   cartId: 435,
 }
 
+function deleteItems(obj) {
+  const {index, email, name, cartId, ...restItems} = obj
+  for (const key in restItems) {
+    if (Object.hasOwnProperty.call(restItems, key)) {
+
+      delete obj[key]
+    }
+  }
+}
+
+deleteItems(person)
+
 console.log(person)
 /*
 {
